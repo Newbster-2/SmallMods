@@ -198,3 +198,8 @@ Exit
 SaveModPackage
 ExitModPackage
 Quit
+
+
+## Allows you to piggy back ride other players and spawned bipeds (you can even build a tower of power!)
+## 
+## Still needs a little work in regards to marker positioning and animation specifics for unarmed, and maybe use third person camera, but I was getting fed up with tinkering with it for now, so if you want to make it better, you can access the script here: https://github.com/Newbster-2/SmallMods
