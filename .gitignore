@@ -1,0 +1,9 @@
+# Ignore all JPEG files
+*.jpg
+*.jpeg
+
+# Ignore all PNG files
+*.png
+
+# Ignore all GIFs
+*.gif

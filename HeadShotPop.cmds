@@ -1,0 +1,24 @@
+"D:\Halo\Eldewrito\Game\maps\tags.dat"
+
+CreateModPackage
+Headshot Birthday Pop
+Just adds the grunt birthday party effect when getting a killing headshot on a player (For the weapon projectiles that are flagged as such)
+Newbie
+1.0
+Multiplayer
+
+## Head section
+EditTag objects\characters\elite\mp_elite\mp_elite.model
+SetField NewDamageInfo[0].DamageSections[1].InstantResponses[0].SecondaryTransitionEffect objects\characters\grunt\fx\grunt_birthday_party.effect
+SaveTagChanges
+Exit
+
+## Head section
+EditTag objects\characters\masterchief\mp_masterchief\mp_masterchief.model
+SetField NewDamageInfo[0].DamageSections[1].InstantResponses[0].SecondaryTransitionEffect objects\characters\grunt\fx\grunt_birthday_party.effect
+SaveTagChanges
+Exit
+
+SaveModPackage
+ExitModPackage
+Quit

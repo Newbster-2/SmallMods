@@ -1,0 +1,200 @@
+"D:\Halo\Eldewrito\Game\maps\tags.dat"
+
+CreateModPackage
+Piggy Back
+Allows you to piggy back on other players (You can even build a tower of power!)
+Newbie
+1.0
+Multiplayer
+
+## New string ids for our seat and seat camera markers
+StringId Add piggyback
+StringId Add piggyback_e
+StringId Add piggyback_cam
+StringId Add piggyback_cam_e
+StringId Add mongoose_p_left_hand_e
+StringId Add mongoose_p_left_foot_e
+StringId Add mongoose_p_right_foot_e
+
+## Animation mode for Chief piggyback (from mongoose_p)
+EditTag objects\characters\masterchief\masterchief.model_animation_graph
+CopyBlockElements Modes 51
+PasteBlockElements Modes
+SetField Modes[*].Name piggyback
+SaveTagChanges
+Exit
+
+## Animation mode for elite piggyback (from mongoose_p)
+EditTag objects\characters\dervish\dervish.model_animation_graph
+CopyBlockElements Modes 78
+PasteBlockElements Modes
+SetField Modes[*].Name piggyback_e
+SetField Modes[*].ModeIk[*].AttachToMarker mongoose_p_left_hand_e
+AddBlockElements Modes[*].ModeIk
+SetField Modes[*].ModeIk[*].Marker left_foot
+SetField Modes[*].ModeIk[*].AttachToMarker mongoose_p_left_foot_e
+AddBlockElements Modes[*].ModeIk
+SetField Modes[*].ModeIk[*].Marker right_foot
+SetField Modes[*].ModeIk[*].AttachToMarker mongoose_p_right_foot_e
+SaveTagChanges
+Exit
+
+## Chief markers for seat location & animation
+## Duplicate "body" marker and then change position for each new marker we need, head marker for hand placement
+## Markers for mongoose passenger animation mode
+EditTag objects\characters\masterchief\mp_masterchief\mp_masterchief.render_model
+CopyBlockElements MarkerGroups 1
+PasteBlockElements MarkerGroups
+SetField MarkerGroups[*].Name piggyback
+SetField MarkerGroups[*].Markers[0].Translation 0.07 -0.025 0
+SetField MarkerGroups[*].Markers[0].Rotation 0.68365645 0.2652421 0.53061056 0.4251034
+CopyBlockElements MarkerGroups 1
+PasteBlockElements MarkerGroups
+SetField MarkerGroups[*].Name piggyback_e
+SetField MarkerGroups[*].Markers[0].Translation 0.07 -0.025 0
+SetField MarkerGroups[*].Markers[0].Rotation 0.68365645 0.2652421 0.53061056 0.4251034
+CopyBlockElements MarkerGroups 1
+PasteBlockElements MarkerGroups
+SetField MarkerGroups[*].Name piggyback_cam
+SetField MarkerGroups[*].Markers[0].Translation 0.35 -0.08 0
+CopyBlockElements MarkerGroups 1
+PasteBlockElements MarkerGroups
+SetField MarkerGroups[*].Name piggyback_cam_e
+SetField MarkerGroups[*].Markers[0].Translation 0.34 0.09 0
+CopyBlockElements MarkerGroups 12
+PasteBlockElements MarkerGroups
+SetField MarkerGroups[*].Name mongoose_p_left_hand
+SetField MarkerGroups[*].Markers[0].Translation 0.09 0.05 0
+SetField MarkerGroups[*].Markers[0].Rotation 0.6903455 0.6903455 -0.1530459 0.1530459
+CopyBlockElements MarkerGroups 12
+PasteBlockElements MarkerGroups
+SetField MarkerGroups[*].Name mongoose_p_left_hand_e
+SetField MarkerGroups[*].Markers[0].Translation 0.09 0.05 0
+SetField MarkerGroups[*].Markers[0].Rotation 0.6903455 0.6903455 -0.1530459 0.1530459
+CopyBlockElements MarkerGroups 1
+PasteBlockElements MarkerGroups
+SetField MarkerGroups[*].Name mongoose_p_left_foot
+SetField MarkerGroups[*].Markers[0].Translation -0.1 0.1 0.1
+CopyBlockElements MarkerGroups 1
+PasteBlockElements MarkerGroups
+SetField MarkerGroups[*].Name mongoose_p_left_foot_e
+SetField MarkerGroups[*].Markers[0].Translation -0.1 0.1 0.1
+CopyBlockElements MarkerGroups 1
+PasteBlockElements MarkerGroups
+SetField MarkerGroups[*].Name mongoose_p_right_foot
+SetField MarkerGroups[*].Markers[0].Translation -0.1 0.1 -0.1
+CopyBlockElements MarkerGroups 1
+PasteBlockElements MarkerGroups
+SetField MarkerGroups[*].Name mongoose_p_right_foot_e
+SetField MarkerGroups[*].Markers[0].Translation -0.1 0.1 -0.1
+SaveTagChanges
+Exit
+
+## Elite markers for seat location & animation
+## Duplicate "body" marker and then change position for each new marker we need, head marker for hand placement
+## Markers for mongoose passenger animation mode
+EditTag objects\characters\elite\mp_elite\mp_elite.render_model
+CopyBlockElements MarkerGroups 1
+PasteBlockElements MarkerGroups
+SetField MarkerGroups[*].Name piggyback
+SetField MarkerGroups[*].Markers[0].Translation 0.11 -0.03 0.015
+SetField MarkerGroups[*].Markers[0].Rotation 0.7015485 0.28813457 0.51853585 0.39487818
+CopyBlockElements MarkerGroups 1
+PasteBlockElements MarkerGroups
+SetField MarkerGroups[*].Name piggyback_e
+SetField MarkerGroups[*].Markers[0].Translation 0.11 -0.03 0
+SetField MarkerGroups[*].Markers[0].Rotation 0.6898932 0.38606653 0.43100998 0.43500623
+CopyBlockElements MarkerGroups 1
+PasteBlockElements MarkerGroups
+SetField MarkerGroups[*].Name piggyback_cam
+SetField MarkerGroups[*].Markers[0].Translation 0.41 -0.08 -0.04
+CopyBlockElements MarkerGroups 1
+PasteBlockElements MarkerGroups
+SetField MarkerGroups[*].Name piggyback_cam_e
+SetField MarkerGroups[*].Markers[0].Translation 0.41 -0.08 -0.04
+CopyBlockElements MarkerGroups 4
+PasteBlockElements MarkerGroups
+SetField MarkerGroups[*].Name mongoose_p_left_hand
+SetField MarkerGroups[*].Markers[0].Translation 0.065 0.08 0
+SetField MarkerGroups[*].Markers[0].Rotation 0.6903455 0.6903455 -0.1530459 0.1530459
+CopyBlockElements MarkerGroups 4
+PasteBlockElements MarkerGroups
+SetField MarkerGroups[*].Name mongoose_p_left_hand_e
+SetField MarkerGroups[*].Markers[0].Translation 0.065 0.08 0
+SetField MarkerGroups[*].Markers[0].Rotation 0.6903455 0.6903455 -0.1530459 0.1530459
+CopyBlockElements MarkerGroups 1
+PasteBlockElements MarkerGroups
+SetField MarkerGroups[*].Name mongoose_p_left_foot
+SetField MarkerGroups[*].Markers[0].Translation -0.025 0.13 0.12
+SetField MarkerGroups[*].Markers[0].Rotation 0.5792279 0.40557978 0.5792279 0.40557978
+CopyBlockElements MarkerGroups 1
+PasteBlockElements MarkerGroups
+SetField MarkerGroups[*].Name mongoose_p_left_foot_e
+SetField MarkerGroups[*].Markers[0].Translation -0.1 0.2 0.16
+SetField MarkerGroups[*].Markers[0].Rotation 0.6408564 0.29883623 0.5 0.5
+CopyBlockElements MarkerGroups 1
+PasteBlockElements MarkerGroups
+SetField MarkerGroups[*].Name mongoose_p_right_foot
+SetField MarkerGroups[*].Markers[0].Translation -0.05 0.14 -0.07
+SetField MarkerGroups[*].Markers[0].Rotation 0.5474341 0.492891 0.5474341 0.3971025
+CopyBlockElements MarkerGroups 1
+PasteBlockElements MarkerGroups
+SetField MarkerGroups[*].Name mongoose_p_right_foot_e
+SetField MarkerGroups[*].Markers[0].Translation -0.08 0.25 -0.07
+SetField MarkerGroups[*].Markers[0].Rotation 0.579228 0.4055798 0.4055798 0.579228
+SaveTagChanges
+Exit
+
+## Chief add seat
+EditTag objects\characters\masterchief\mp_masterchief\mp_masterchief.biped
+AddBlockElements Seats
+SetField Seats[*].Flags Driver,AllowsWeapons
+SetField Seats[*].Label piggyback
+SetField Seats[*].MarkerName piggyback
+SetField Seats[*].EntryMarkerName body
+SetField Seats[*].PingScale 1
+SetField Seats[*].FlippedEvictionTime 32000
+SetField Seats[*].AiSeatType Driver
+SetField Seats[*].BoardingSeat -1
+SetField Seats[*].UnitCamera.CameraMarkerName piggyback_cam
+SetField Seats[*].EntryRadius 0.4
+SetField Seats[*].EntryMarkerConeAngle 180
+SetField Seats[*].EntryMarkerFacingAngle 45
+SetField Seats[*].MaximumRelativeVelocity 1
+SetField Seats[*].RuntimeInvisibleSeatRegionIndex -1
+CopyBlockElements Seats 0
+PasteBlockElements Seats
+SetField Seats[*].Label piggyback_e
+SetField Seats[*].MarkerName piggyback_e
+SetField Seats[*].UnitCamera.CameraMarkerName piggyback_cam_e
+SaveTagChanges
+Exit
+
+## Elite add seat
+EditTag objects\characters\elite\mp_elite\mp_elite.biped
+AddBlockElements Seats
+SetField Seats[*].Flags Driver,AllowsWeapons
+SetField Seats[*].Label piggyback
+SetField Seats[*].MarkerName piggyback
+SetField Seats[*].EntryMarkerName body
+SetField Seats[*].PingScale 1
+SetField Seats[*].FlippedEvictionTime 32000
+SetField Seats[*].AiSeatType Driver
+SetField Seats[*].BoardingSeat -1
+SetField Seats[*].UnitCamera.CameraMarkerName piggyback_cam
+SetField Seats[*].EntryRadius 0.4
+SetField Seats[*].EntryMarkerConeAngle 180
+SetField Seats[*].EntryMarkerFacingAngle 45
+SetField Seats[*].MaximumRelativeVelocity 1
+SetField Seats[*].RuntimeInvisibleSeatRegionIndex -1
+CopyBlockElements Seats 0
+PasteBlockElements Seats
+SetField Seats[*].Label piggyback_e
+SetField Seats[*].MarkerName piggyback_e
+SetField Seats[*].UnitCamera.CameraMarkerName piggyback_cam_e
+SaveTagChanges
+Exit
+
+SaveModPackage
+ExitModPackage
+Quit
