@@ -9,6 +9,9 @@ Multiplayer
 
 ## All materials
 ForEach matg ForEach Materials SetField Friction 0
+## ForEach PlayerInformation SetField AirborneAcceleration 0
+## depending on this value you either have lots of control, but act like you have lots of friction, or you have no control but now can slide just as easily 
+## as all other objects
 
 ## All physics models
 ForEach phmo ForEach Spheres SetField Friction 0
