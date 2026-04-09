@@ -1,0 +1,21 @@
+"D:\Halo\Eldewrito\Game\maps\tags.dat"
+
+CreateModPackage
+Trailer Bomb
+Deliver the payload to the enemy base, bomb attaches automatically to any vehicle that comes into proximity, and disconnects if vehicle dies, starts detonation once in zone
+Newbie
+1.0
+Multiplayer
+
+EditTag levels\multi\shrine\shrine.scenario
+CompileScripts "D:\Development\Mods\SmallMods\TrailerMode.hsc"
+SaveTagChanges
+Exit
+
+## ForEach scnr CompileScripts "D:\Development\Mods\SmallMods\TrailerMode.hsc" Append
+
+## CS <
+
+SaveModPackage
+ExitModPackage
+Quit
